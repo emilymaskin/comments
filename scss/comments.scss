@@ -1,0 +1,112 @@
+@import "colors";
+@import "styles";
+@import "mixins";
+
+body{
+	background-color:$background;
+	font:$font;
+	.wrapper{
+	  padding:$padding;
+    width:624px - ($padding*2);
+    margin:0 auto;
+    .section{
+      position:relative;
+      overflow:hidden;
+      .user_image{
+        position:absolute;
+        height:100%;
+        margin-right:15px;   
+        .thumbnail{
+          background-color:$background;
+          padding:18px 0;
+          position:absolute;
+        }
+        .gray_line{
+          width:1px;
+          background-color:$border;
+          height:100%;
+          position:absolute;
+          right:0;
+        }
+      }
+      &.top_comment{
+        @include userimage(35px,5px);        
+      }
+      &.subsection{
+        @include userimage(20px,35px);
+      }
+      .user_info{
+        line-height:24px;
+        .name{
+          font-weight:bold;
+          color:$name;
+          margin-right:7px;
+        }
+        .description{
+          color:$description;
+          font-style:italic;
+        }
+        .delete{
+          float:right;
+          height:10px;
+          width:10px;
+          background:url(../images/icon-close-dark.png) no-repeat center top;
+          cursor:pointer;
+          display:none;
+          &:hover{
+            background-position:center bottom;
+          }
+        }
+      }
+      .user_comment{
+        color:$comment;
+        line-height:18px;
+      }
+      .comment_info{
+        line-height:26px;
+        color:$comment_info;
+        .divider{
+          margin:0 7px;
+        }
+        .reply{
+          color:$link;
+          text-decoration:none;
+        }
+      }
+    }
+    .new_comment_box{
+      position:relative;
+      margin-top:8px;
+      .new_user_image{
+        @include thumbnail_image(35px);
+        position:absolute;
+      }
+      .comment_area{
+        margin-left:45px;
+        margin-right:80px;
+        input{
+          width:100%;
+          padding:9px;
+          border-radius:5px;
+          border:1px solid $border;
+          font:$font;
+          color:$description;
+          font-style:italic;
+        }
+      }
+      .post{
+        background-color:$link;
+        color:$background;
+        border:none;
+        padding:7px 6px;
+        border-radius:2px;
+        font-size:13px;
+        position:absolute;
+        right:5px;
+        top:0;
+        box-shadow:0 2px 1px $shadow;
+        cursor:pointer;
+      }
+    }
+  }
+}

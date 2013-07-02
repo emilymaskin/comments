@@ -1,0 +1,20 @@
+@mixin thumbnail_image($length){
+    width:$length;
+    height:$length;
+    border-radius:3px;
+}
+@mixin userimage($length,$margin) {
+  .user_image{
+    width:$length;
+    .thumbnail{
+      img{
+        @include thumbnail_image($length);
+      }
+    }
+  }
+  .text{
+    padding-top:12px;
+    margin-left:$length + 15;
+    margin-right:$margin;
+  }
+}
