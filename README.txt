@@ -1,8 +1,4 @@
-Welcome to the Skillshare FE Engineering Exercise.
-
----
-
-Within this .zip file, please find a .png that illustrates a tree of comments.
+The file comments.png illustrates a tree of comments.
 
 As the FE lead on this project, you're tasked with:
 
@@ -17,12 +13,4 @@ As the FE lead on this project, you're tasked with:
 		- No server-side functionality is required.
 			- Instead, how would you prototype creating a new comment using data at the front-end?
 
-Tip: How would you build out this application in a way that can be re-usable across different areas of Skillshare?
-
----
-
-Feel free to use any tools, libraries or frameworks to aid you in the exercise.
-
-Upon delivery, please package your project into a .zip/.tar file and email it back to us. (You may additionally host the project if you wish.)
-
-Please let me know if you have any questions at all, or if you need any further info or assets to complete the exercise.
+3. How would you build out this application in a way that can be re-usable across different areas?
